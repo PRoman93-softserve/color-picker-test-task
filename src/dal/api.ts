@@ -6,14 +6,9 @@ const instance = axios.create({
 })
 export const api = {
     getColor() {
-        return instance.get(``).then(data=>{
-            return{
-                data
-            }
-        })
+        return instance.get(``).then(data => data.data)
     },
-    changeColor(color:ColorType) {
-        debugger
+    changeColor(color: ColorType) {
         return instance.post(``, color)
     }
 }

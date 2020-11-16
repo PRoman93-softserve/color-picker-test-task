@@ -1,4 +1,3 @@
-
 //paths
 export const MAIN_PAGE = "/mainPage"
 export const COLOR_PICKER_PAGE = "/colorPickerPage"

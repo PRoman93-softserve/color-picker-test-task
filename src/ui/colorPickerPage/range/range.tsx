@@ -5,9 +5,7 @@ type PropType = {
     value: number,
     onHandlerChange: (e: number) => void
 }
-
 const Range = (props: PropType) => {
-
     return (
         <RangeSlider
             max={255}
@@ -15,6 +13,5 @@ const Range = (props: PropType) => {
             onChange={(e: ChangeEvent<HTMLInputElement>) => props.onHandlerChange(+e.currentTarget.value)}
         />
     );
-
 };
 export default Range

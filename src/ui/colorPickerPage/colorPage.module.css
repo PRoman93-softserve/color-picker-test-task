@@ -45,6 +45,7 @@
 .button:active {
     background: white;
 }
-.hintMessage{
+
+.hintMessage {
     transition: 0.5s;
 }

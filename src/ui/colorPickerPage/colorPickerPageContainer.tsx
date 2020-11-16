@@ -1,14 +1,15 @@
-import React, {useEffect, useMemo, useState} from "react"
+import React, {useEffect, useState} from "react"
 import {ColorPickerPage} from "./colorPickerPage"
 import {useDispatch, useSelector} from "react-redux";
 import {addColor, getColor, onResetColor} from "../../bll/colorsReducer";
 import Loading from "../../accets/loading";
+import {AppStateType} from "../../bll/store";
 
 export const ColorPickerContainer = () => {
 
     const dispatch = useDispatch()
-    const color = useSelector((state: any) => state.reducer.color)
-    const loading = useSelector((state: any) => state.reducer.loading)
+    const color = useSelector((state: AppStateType) => state.reducer.color)
+    const loading = useSelector((state: AppStateType) => state.reducer.loading)
 
 
     useEffect(() => {
@@ -42,9 +43,7 @@ export const ColorPickerContainer = () => {
         setMessageHint('')
     }
 
-
     const onCancelClick = () => {
-        debugger
         onRangeHiddenStatusChange(false)
         setMessageHint('color was cleaned')
         const color = {r: 0, g: 0, b: 0}
@@ -52,7 +51,6 @@ export const ColorPickerContainer = () => {
     }
 
     const onNewColorPicked = () => {
-        debugger
         setMessageHint('color was chose')
         const color = {r, g, b}
         dispatch(addColor(color))
@@ -71,3 +69,4 @@ export const ColorPickerContainer = () => {
         </>
     )
 }
+export default ColorPickerContainer

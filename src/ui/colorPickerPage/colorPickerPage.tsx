@@ -3,25 +3,26 @@ import s from "./colorPage.module.css"
 import Range from "./range/range"
 
 type PropType = {
-    onNewColorPicked:()=>void,
-    onRangeHiddenStatusChange:(range:boolean)=>void,
-    onCancelClick:()=>void,
-    onRChange:(r:number)=>void,
-    onGChange:(g:number)=>void,
-    onBChange:(b:number)=>void,
-    message?:string,
-    r:number,
-    g:number,
-    b:number,
-    range:boolean,
+    onNewColorPicked: () => void,
+    onRangeHiddenStatusChange: (range: boolean) => void,
+    onCancelClick: () => void,
+    onRChange: (r: number) => void,
+    onGChange: (g: number) => void,
+    onBChange: (b: number) => void,
+    message?: string,
+    r: number,
+    g: number,
+    b: number,
+    range: boolean,
 
 }
-export const ColorPickerPage = (props:PropType) => {
-    console.log('props color page',props)
-    let {onNewColorPicked, onRangeHiddenStatusChange,
+export const ColorPickerPage = (props: PropType) => {
+    let {
+        onNewColorPicked, onRangeHiddenStatusChange,
         onCancelClick, onRChange,
         onGChange, onBChange,
-        message, r, g, b , range} = props
+        message, r, g, b, range
+    } = props
 
     return (
         <div className={s.colorPickerPageWrapper}>
