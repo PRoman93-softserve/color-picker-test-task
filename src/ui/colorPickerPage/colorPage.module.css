@@ -1,0 +1,50 @@
+.colorPickerPageWrapper {
+    width: 30%;
+    margin: 0 auto;
+    height: 80%;
+}
+
+.colorPickerPageWrapper div {
+    margin: 20px 0;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+}
+
+.rangesBlock {
+    display: flex;
+    justify-content: space-around;
+}
+
+.singleRangeBlock {
+    width: 300px;
+}
+
+.button {
+    background-color: darkblue;
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, .2);
+    color: darkblue;
+}
+
+.button:active {
+    background: white;
+}
+.hintMessage{
+    transition: 0.5s;
+}
