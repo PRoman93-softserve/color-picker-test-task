@@ -1,6 +1,10 @@
 
-# To start server please use 
-### `yarn run json-server` 
+# Please, use 
+### `yarn dev run`
+
+# It's an easy way to start 
+#application and json-server 
+#in one command 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
